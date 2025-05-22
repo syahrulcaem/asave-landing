@@ -1,10 +1,25 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: "Asave - Aplikasi Pengelolaan Keuangan",
+  description: "Aplikasi penganggaran bergaya brutalis yang membantu Anda melacak pengeluaran, menghemat uang, dan mencapai tujuan keuangan Anda.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png" }
+    ],
+    apple: [
+      { url: "/apple-icon.png" }
+    ],
+    shortcut: [
+      { url: "/shortcut-icon.png" }
+    ]
+  },
+  manifest: "/manifest.json"
 }
 
 export default function RootLayout({
@@ -13,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="id">
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }
