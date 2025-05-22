@@ -92,3 +92,19 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@media (max-width: 640px) {
+  .shadow-\[8px_8px_0px_0px_rgba\(0\,0\,0\,1\)\] {
+    box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+  }
+  
+  .border-4 {
+    border-width: 3px;
+  }
+  
+  /* Mengurangi padding secara global */
+  section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
